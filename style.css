@@ -5,71 +5,75 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Smooth dark-neon background */
 body {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: radial-gradient(circle at top, #0a0f24, #05070d, #000000);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.5s ease; /* Smooth background change */
+  transition: background 0.5s ease;
 }
 
-/* Background states */
+/* Correct background glow */
 body.correct-bg {
-  background: radial-gradient(circle at center, #28a74555, #0f0c29);
+  background: radial-gradient(circle at center, rgba(0, 255, 120, 0.25), #000814);
 }
 
+/* Wrong background glow */
 body.wrong-bg {
-  background: radial-gradient(circle at center, #dc354555, #0f0c29);
+  background: radial-gradient(circle at center, rgba(255, 0, 70, 0.25), #000814);
 }
 
+/* Glass card */
 .container {
   width: 480px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(15, 25, 40, 0.45);
   padding: 35px;
   border-radius: 20px;
   backdrop-filter: blur(15px);
   text-align: center;
-  color: #fff;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.8s ease;
+  color: #e3e8ff;
+  box-shadow: 0 0 25px rgba(0, 40, 120, 0.4);
+  animation: fadeIn 0.7s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
+  from { opacity: 0; transform: scale(0.93); }
   to { opacity: 1; transform: scale(1); }
 }
 
 h1, h2 {
   margin-bottom: 20px;
   font-weight: 600;
-  letter-spacing: 1px;
+  color: #bcd0ff;
+  text-shadow: 0 0 10px #1f4aff33;
 }
 
 .btn {
-  background: linear-gradient(135deg, #6a5acd, #8b7bff);
+  background: linear-gradient(135deg, #1f4aff, #4f7cff);
   color: white;
   border: none;
-  padding: 14px 20px;
+  padding: 14px;
   border-radius: 12px;
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
   font-size: 18px;
-  transition: 0.3s ease;
-  box-shadow: 0px 5px 15px rgba(106, 90, 205, 0.4);
+  transition: 0.3s;
+  box-shadow: 0px 6px 18px rgba(31, 74, 255, 0.4);
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 7px 20px rgba(106, 90, 205, 0.6);
-  background: linear-gradient(135deg, #7b6fff, #9a8dff);
+  box-shadow: 0px 8px 25px rgba(31, 74, 255, 0.6);
 }
 
 .hidden {
   display: none;
 }
 
+/* Grid for answers */
 .btn-grid {
   display: grid;
   gap: 12px;
@@ -78,34 +82,34 @@ h1, h2 {
 
 /* Answer button */
 .answer-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(100, 120, 255, 0.3);
   padding: 14px;
   border-radius: 14px;
   cursor: pointer;
   transition: 0.3s;
-  backdrop-filter: blur(4px);
+  color: #e8eaff;
   font-size: 16px;
 }
 
-/* Hover highlight */
 .answer-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(90, 110, 255, 0.25);
   transform: translateY(-2px);
+  box-shadow: 0 0 10px #4f7cff55;
 }
 
-/* Correct answer green */
+/* Correct (green neon) */
 .correct {
   background: #28a745 !important;
   border-color: #28a745 !important;
   color: white;
-  box-shadow: 0 0 15px #28a745aa;
+  box-shadow: 0 0 18px rgba(40, 167, 69, 0.7);
 }
 
-/* Wrong answer red */
+/* Wrong (red neon) */
 .wrong {
   background: #dc3545 !important;
   border-color: #dc3545 !important;
   color: white;
-  box-shadow: 0 0 15px #dc3545aa;
+  box-shadow: 0 0 18px rgba(220, 53, 69, 0.7);
 }
