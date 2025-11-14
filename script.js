@@ -163,6 +163,7 @@ function startQuiz() {
 }
 
 function showQuestion() {
+  document.body.classList.remove("correct-bg", "wrong-bg");
   resetState();
 
   let current = questions[currentQuestionIndex];
