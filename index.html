@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz App</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="quiz-container">
+
     <h1>Quiz App</h1>
-    <div id="question-container" class="hide">
-      <h2 id="question">Question text</h2>
-      <div id="answer-buttons" class="btn-grid"></div>
+
+    <div id="result-box" class="result hide"></div>
+
+    <div id="question" class="question">Question text</div>
+
+    <div id="answer-buttons" class="btn-grid">
+      <!-- Answer buttons will be created by JS -->
     </div>
 
-    <button id="start-btn" class="start-btn btn">Start Quiz</button>
-    <button id="next-btn" class="next-btn btn hide">Next</button>
+    <button id="next-btn" class="btn">Next</button>
 
-    <div id="result" class="result hide"></div>
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
