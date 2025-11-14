@@ -15,6 +15,90 @@ let score = 0;
 
 const questions = [
   {
+    question: "Which language runs in a web browser?",
+    answers: [
+      { text: "Java", correct: false },
+      { text: "C", correct: false },
+      { text: "Python", correct: false },
+      { text: "JavaScript", correct: true }
+    ]
+  },
+  {
+    question: "What does CSS stand for?",
+    answers: [
+      { text: "Central Style Sheets", correct: false },
+      { text: "Cascading Style Sheets", correct: true },
+      { text: "Computer Style System", correct: false },
+      { text: "Creative Styling System", correct: false }
+    ]
+  },
+  {
+    question: "What year was JavaScript launched?",
+    answers: [
+      { text: "1996", correct: false },
+      { text: "1995", correct: true },
+      { text: "1994", correct: false },
+      { text: "2000", correct: false }
+    ]
+  },
+
+  // 2. New Questions – Each from a different domain
+
+  // 🎮 Topic: Gaming
+  {
+    question: "In PUBG, what is the maximum number of players in a classic match?",
+    answers: [
+      { text: "50", correct: false },
+      { text: "75", correct: false },
+      { text: "100", correct: true },
+      { text: "150", correct: false }
+    ]
+  },
+
+  // 🌐 Topic: Web Development
+  {
+    question: "Which HTTP status code means 'Not Found'?",
+    answers: [
+      { text: "200", correct: false },
+      { text: "301", correct: false },
+      { text: "404", correct: true },
+      { text: "500", correct: false }
+    ]
+  },
+
+  // ⚡ Topic: Electronics
+  {
+    question: "Which component is used to store electrical charge?",
+    answers: [
+      { text: "Resistor", correct: false },
+      { text: "Diode", correct: false },
+      { text: "Transistor", correct: false },
+      { text: "Capacitor", correct: true }
+    ]
+  },
+
+  // 💻 Topic: Computer Science
+  {
+    question: "Which data structure uses FIFO (First In First Out)?",
+    answers: [
+      { text: "Stack", correct: false },
+      { text: "Queue", correct: true },
+      { text: "Tree", correct: false },
+      { text: "Graph", correct: false }
+    ]
+  },
+
+  // 🌍 Topic: Geography
+  {
+    question: "Which is the largest desert in the world?",
+    answers: [
+      { text: "Sahara Desert", correct: false },
+      { text: "Gobi Desert", correct: false },
+      { text: "Antarctic Desert", correct: true },
+      { text: "Arabian Desert", correct: false }
+    ]
+  },
+  {
     question: "🎮 Gaming: Which game features the character 'Kratos'?",
     answers: [
       { text: "God of War", correct: true },
@@ -26,8 +110,8 @@ const questions = [
   {
     question: "💻 Web Dev: What does CSS stand for?",
     answers: [
-      { text: "Cascading Style Sheets", correct: true },
       { text: "Creative Styling System", correct: false },
+       { text: "Cascading Style Sheets", correct: true },
       { text: "Computer Style Setup", correct: false },
       { text: "Code Styling Sheet", correct: false }
     ]
@@ -44,18 +128,20 @@ const questions = [
   {
     question: "🖥️ Computing: CPU stands for?",
     answers: [
-      { text: "Central Processing Unit", correct: true },
+     
       { text: "Core Power Utility", correct: false },
       { text: "Central Program Unit", correct: false },
-      { text: "Control Processing Unit", correct: false }
+      { text: "Control Processing Unit", correct: false },
+       { text: "Central Processing Unit", correct: true }
     ]
   },
   {
     question: "🌎 Geography: Which is the largest ocean?",
     answers: [
-      { text: "Pacific Ocean", correct: true },
+   
       { text: "Indian Ocean", correct: false },
       { text: "Atlantic Ocean", correct: false },
+         { text: "Pacific Ocean", correct: true },
       { text: "Arctic Ocean", correct: false }
     ]
   }
