@@ -188,6 +188,15 @@ function selectAnswer(e) {
   const selectedBtn = e.target;
   const correct = selectedBtn.dataset.correct === "true";
 
+  document.body.classList.remove("correct-bg", "wrong-bg");
+
+if (correct) {
+    document.body.classList.add("correct-bg");
+} else {
+    document.body.classList.add("wrong-bg");
+}
+
+
   if (correct) score++;
 
   // Set classes
